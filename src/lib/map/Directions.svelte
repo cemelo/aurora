@@ -1,9 +1,9 @@
-<script lang='ts'>
+<script lang="ts">
   import { Map } from '@beyonk/svelte-mapbox';
   import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
   import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
 
-  import { getContext, onMount } from 'svelte';
+  import { getContext, onMount, onDestroy } from 'svelte';
   import { contextKey } from '@beyonk/svelte-mapbox';
 
   const { getMap, getMapbox } = getContext(contextKey);
@@ -21,27 +21,30 @@
     controls: {
       inputs: false,
       instructions: false,
-      profileSwitcher: false
+      profileSwitcher: false,
     },
-    flyTo: true
+    flyTo: true,
   };
 
   const directions = new MapboxDirections(options);
-
-  map.addControl(directions, position);
+  directions.on('route', () => {
+    try {
+      directions.mapState();
+    } catch (e) {
+      console.error(e);
+    }
+  });
 
   onMount(async () => {
+    map.addControl(directions, position);
+
     setTimeout(async () => {
-      directions.setOrigin('SQN 110 Bloco M, Brasília - DF, Brasil');
+      directions.setOrigin('SQN 110, Brasília - DF, Brasil');
       directions.setDestination('Complexo da Polícia Civil do Distrito Federal, Brasília - DF, Brasil');
-
-      setTimeout(() => {
-        directions.reverse();
-
-        setTimeout(() => {
-          directions.reverse();
-        });
-      });
     }, 1000);
+  });
+
+  onDestroy(() => {
+    map.removeControl(directions);
   });
 </script>

@@ -1,9 +1,9 @@
-<script lang='ts'>
+<script lang="ts">
   import { Map } from '@beyonk/svelte-mapbox';
 
-  import { getContext, onMount } from 'svelte';
+  import { getContext, onDestroy, onMount } from 'svelte';
   import { contextKey } from '@beyonk/svelte-mapbox';
-  import MapboxTraffic from '@mapbox/mapbox-gl-traffic';
+  import MapboxTraffic from '@mapbox/mapbox-gl-traffic/mapbox-gl-traffic';
 
   const { getMap } = getContext(contextKey);
   const map: Map = getMap();
@@ -11,18 +11,19 @@
 
   export let position = 'top-right';
 
-  export let options: { showTraffic: boolean, showTrafficButton: boolean } = {
+  export let options: { showTraffic: boolean; showTrafficButton: boolean } = {
     showTraffic: true,
-    showTrafficButton: false
+    showTrafficButton: false,
   };
 
   const traffic = new MapboxTraffic(options);
 
   onMount(() => {
     map.addControl(traffic, position);
+    traffic.render();
+  });
 
-    // We need to toggle traffic twice to make it being displayed if showTraffic is true
-    traffic.toggleTraffic();
-    traffic.toggleTraffic();
+  onDestroy(() => {
+    map.removeControl(traffic);
   });
 </script>

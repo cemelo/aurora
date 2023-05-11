@@ -19,52 +19,31 @@
 
   const iconsMapping = {
     // Thunderstorms
-    200: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain',
-    201: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain',
-    202: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain',
-    210: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day' : 'thunderstorms-night',
-    211: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day' : 'thunderstorms-night',
-    212: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day' : 'thunderstorms-night',
-    221: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day' : 'thunderstorms-night',
-    230: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain',
-    231: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain',
-    232: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain',
+    200: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain'),
+    201: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain'),
+    202: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain'),
+    210: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day' : 'thunderstorms-night'),
+    211: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day' : 'thunderstorms-night'),
+    212: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day' : 'thunderstorms-night'),
+    221: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day' : 'thunderstorms-night'),
+    230: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain'),
+    231: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain'),
+    232: (_uvIndex: number, isDay: boolean) => (isDay ? 'thunderstorms-day-rain' : 'thunderstorms-night-rain'),
 
     // Drizzle
-    300: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-drizzle' : 'partly-cloudy-night-drizzle', // Drizzle 	light intensity drizzle 	09d
-    301: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-drizzle' : 'partly-cloudy-night-drizzle', // Drizzle 	drizzle 	09d
-    302: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-drizzle' : 'partly-cloudy-night-drizzle', // Drizzle 	heavy intensity drizzle 	09d
-    310: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-drizzle' : 'partly-cloudy-night-drizzle', // Drizzle 	light intensity drizzle rain 	09d
-    311: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail', // Drizzle 	drizzle rain 	09d
-    312: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail', // Drizzle 	heavy intensity drizzle rain 	09d
-    313: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail', // Drizzle 	shower rain and drizzle 	09d
-    314: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail', // Drizzle 	heavy shower rain and drizzle 	09d
-    321: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail', // Drizzle 	shower drizzle 	09d
+    300: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-drizzle' : 'partly-cloudy-night-drizzle'), // Drizzle 	light intensity drizzle 	09d
+    301: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-drizzle' : 'partly-cloudy-night-drizzle'), // Drizzle 	drizzle 	09d
+    302: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-drizzle' : 'partly-cloudy-night-drizzle'), // Drizzle 	heavy intensity drizzle 	09d
+    310: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-drizzle' : 'partly-cloudy-night-drizzle'), // Drizzle 	light intensity drizzle rain 	09d
+    311: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail'), // Drizzle 	drizzle rain 	09d
+    312: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail'), // Drizzle 	heavy intensity drizzle rain 	09d
+    313: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail'), // Drizzle 	shower rain and drizzle 	09d
+    314: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail'), // Drizzle 	heavy shower rain and drizzle 	09d
+    321: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-hail' : 'partly-cloudy-night-hail'), // Drizzle 	shower drizzle 	09d
 
     // Rain
-    500: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-rain' : 'partly-cloudy-night-rain', //  Rain 	light rain 	10d
-    501: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day-rain' : 'partly-cloudy-night-rain', //  Rain 	moderate rain 	10d
+    500: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-rain' : 'partly-cloudy-night-rain'), //  Rain 	light rain 	10d
+    501: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day-rain' : 'partly-cloudy-night-rain'), //  Rain 	moderate rain 	10d
     502: (_uvIndex: number, isDay: boolean) => (isDay ? 'rain' : 'rain'), //  Rain 	heavy intensity rain 	10d
     503: (_uvIndex: number, isDay: boolean) => (isDay ? 'rain' : 'rain'), //  Rain 	very heavy rain 	10d
     504: (_uvIndex: number, isDay: boolean) => (isDay ? 'rain' : 'rain'), //  Rain 	extreme rain 	10d
@@ -109,11 +88,10 @@
       }
     }, // Clear 	clear sky 	01d
 
-    801: (_uvIndex: number, isDay: boolean) =>
-      isDay ? 'partly-cloudy-day' : 'partly-cloudy-night', //  Clouds 	few clouds: 11-25% 	02d
+    801: (_uvIndex: number, isDay: boolean) => (isDay ? 'partly-cloudy-day' : 'partly-cloudy-night'), //  Clouds 	few clouds: 11-25% 	02d
     802: (_uvIndex: number, isDay: boolean) => (isDay ? 'cloudy' : 'cloudy'), //  Clouds 	scattered clouds: 25-50% 	03d
     803: (_uvIndex: number, isDay: boolean) => (isDay ? 'overcast-day' : 'overcast-night'), //  Clouds 	broken clouds: 51-84% 	04d
-    804: (_uvIndex: number, isDay: boolean) => (isDay ? 'overcast' : 'overcast') //  Clouds 	overcast clouds: 85-100% 	04d
+    804: (_uvIndex: number, isDay: boolean) => (isDay ? 'overcast' : 'overcast'), //  Clouds 	overcast clouds: 85-100% 	04d
   };
 
   afterUpdate(() => {

@@ -27,9 +27,9 @@
   import cloudy from '$lib/assets/weather/cloudy.svg';
 
   let clazz;
-  let name = 'Rosana';
-
   export { clazz as class };
+
+  let name = 'Rosana';
 </script>
 
 <style>
@@ -51,7 +51,7 @@
   }
 
   .filter-light-blue {
-    filter: brightness(0) saturate(100%) invert(81%) sepia(74%) saturate(3187%) hue-rotate(176deg)
-      brightness(102%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(81%) sepia(74%) saturate(3187%) hue-rotate(176deg) brightness(102%)
+      contrast(102%);
   }
 </style>
