@@ -1,4 +1,4 @@
-<div class={`rooms flex flex-col gap-2 ${clazz || ''}`}>
+<div class={`rooms flex flex-col gap-4 ${clazz || ''}`}>
   <div class="room-selector text-lg font-medium">
     <ul class="flex flex-row justify-items-center items-center gap-3 h-full">
       {#each rooms as room}

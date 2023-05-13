@@ -47,7 +47,8 @@
   }
 
   .weather .indicator-text {
-    font-weight: 400;
+    font-size: 1.1em;
+    font-weight: 500;
   }
 
   .filter-light-blue {
