@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --gradient_bg_color: rgb(60, 55, 106);
+
+  --gradient_spot1_color: #001a39;
+  --gradient_spot1_w: 75vw;
+  --gradient_spot1_h: 75vh;
+  --gradient_spot1_x: 0;
+  --gradient_spot1_y: 0;
+
+  --gradient_spot2_color: #9b70ff;
+  --gradient_spot2_w: 75vw;
+  --gradient_spot2_h: 75vh;
+  --gradient_spot2_x: 100%;
+  --gradient_spot2_y: 0;
+
+  --gradient_spot3_color: #42ffc6;
+  --gradient_spot3_w: 75vw;
+  --gradient_spot3_h: 75vh;
+  --gradient_spot3_x: 100%;
+  --gradient_spot3_y: 100%;
+
+  --gradient_spot4_color: #ff3b8d;
+  --gradient_spot4_w: 75vw;
+  --gradient_spot4_h: 75vh;
+  --gradient_spot4_x: 0;
+  --gradient_spot4_y: 100%;
+}
+
+.fancy-background {
+  background-color: var(--gradient_bg_color);
+  background-image: radial-gradient(
+      var(--gradient_spot1_w) var(--gradient_spot1_h) at left var(--gradient_spot1_x) top var(--gradient_spot1_y),
+      var(--gradient_spot1_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot2_w) var(--gradient_spot2_h) at left var(--gradient_spot2_x) top var(--gradient_spot2_y),
+      var(--gradient_spot2_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot3_w) var(--gradient_spot3_h) at left var(--gradient_spot3_x) top var(--gradient_spot3_y),
+      var(--gradient_spot3_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot4_w) var(--gradient_spot4_h) at left var(--gradient_spot4_x) top var(--gradient_spot4_y),
+      var(--gradient_spot4_color),
+      transparent
+    );
+}
+
+.fancy-gradient--watermelon {
+  --gradient_spot1_color: #1598d1;
+  --gradient_spot2_color: #7977ee;
+  --gradient_spot3_color: #4bc5ce;
+  --gradient_spot4_color: #704b77;
+  --gradient_bg_color: #162a64;
+}
+
+html {
+  user-select: none;
+  cursor: default !important;
+}

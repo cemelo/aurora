@@ -8,18 +8,19 @@
   </div>
 
   <div class="card-container grow grid gap-4 grid-cols-3 gradient-scroll-v">
-    <StandardLight />
-    <StandardLight />
-    <StandardLight />
-    <StandardLight />
-    <StandardLight />
-    <StandardLight />
-    <StandardLight />
+    <StandardLightCard />
+    <DimmableLightCard />
+    <StandardLightCard />
+    <StandardLightCard />
+    <StandardLightCard />
+    <StandardLightCard />
+    <StandardLightCard />
   </div>
 </div>
 
 <script lang="ts">
-  import StandardLight from '$lib/cards/StandardLight.svelte';
+  import StandardLightCard from '$lib/devices/lights/StandardLightCard.svelte';
+  import DimmableLightCard from '$lib/devices/lights/DimmableLightCard.svelte';
 
   let clazz;
   export { clazz as class };
